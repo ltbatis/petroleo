@@ -10,7 +10,6 @@ import plotly.express as px
 from sklearn.model_selection import cross_val_score
 
 st.title("Análise e Previsão de Preço do Petróleo")
-st.image("assets/offshore_oil.jpg", caption="Plataforma de Extração de Petróleo, Fonte: Pexels@jan-rune-smenes-reite-221584", use_column_width=True)
 
 # TODO: @ltbatis colocar o link do Proton com os Arquivos
 st.markdown("""
