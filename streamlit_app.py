@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+import streamlit_mermaid as stmd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 from statsmodels.tsa.seasonal import seasonal_decompose
@@ -35,7 +36,7 @@ graph LR
 ```"""
 
 st.title("Análise e Previsão de Preço do Petróleo")
-st.markdown(diagrama_mermaid, unsafe_allow_html=True)
+stmd.st_mermaid(diagrama_mermaid)
 st.markdown("""
 ### Links Úteis:
 - [Nosso app no Streamlit](https://petroleo-ptp3vt6vxu7u2psoipv49b.streamlit.app/)
