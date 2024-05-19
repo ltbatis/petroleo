@@ -9,9 +9,33 @@ from sklearn.metrics import mean_squared_error
 import plotly.express as px
 from sklearn.model_selection import cross_val_score
 
-st.title("Análise e Previsão de Preço do Petróleo")
 
-# TODO: @ltbatis colocar o link do Proton com os Arquivos
+diagrama_mermaid = """
+```mermaid
+graph LR
+    conflitos[Conflitos] -->|Processa| PySpark{{PySpark}}
+    dow_jones[Dow Jones] -->|Processa| PySpark
+    nasdaq[Nasdaq] -->|Processa| PySpark
+    em_data_disasters[EM Data Disasters] -->|Processa| PySpark
+    preco_dolar[Preço do Dólar] -->|Processa| PySpark
+    preco_petroleo[Preço do Petróleo] -->|Processa| PySpark
+    PySpark -->|Gera| resultado[Parquet: Resultado]
+    resultado -->|Consumido por| PowerBI[Power BI]
+    PowerBI -->|Integra| StreamLit[StreamLit]
+    preco_petroleo -->|Direto| StreamLit
+    
+    classDef fontes fill:#f96,stroke:#333,stroke-width:2px;
+    classDef ferramentas fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef dados fill:#9f6,stroke:#333,stroke-width:2px;
+    classDef resultado fill:#f9f,stroke:#333,stroke-width:2px;
+    
+    class conflitos,dow_jones,nasdaq,em_data_disasters,preco_dolar,preco_petroleo fontes;
+    class PySpark,PowerBI,StreamLit ferramentas;
+    class resultado dados;
+```"""
+
+st.title("Análise e Previsão de Preço do Petróleo")
+st.markdown(diagrama_mermaid, unsafe_allow_html=True)
 st.markdown("""
 ### Links Úteis:
 - [Nosso app no Streamlit](https://petroleo-ptp3vt6vxu7u2psoipv49b.streamlit.app/)
