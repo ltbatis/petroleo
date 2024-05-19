@@ -186,9 +186,6 @@ y = dados['preco']  # Variável dependente
 modelo_lr = LinearRegression()
 modelo_lr.fit(X, y)
 
-# Avaliação do Modelo
-st.subheader("Avaliação do Modelo")
-
 # Previsões no conjunto de treino
 previsoes_train = modelo_lr.predict(X)
 
