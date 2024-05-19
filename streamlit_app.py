@@ -12,7 +12,6 @@ from sklearn.model_selection import cross_val_score
 
 
 diagrama_mermaid = """
-```mermaid
 graph LR
     conflitos[Conflitos] -->|Processa| PySpark{{PySpark}}
     dow_jones[Dow Jones] -->|Processa| PySpark
@@ -33,7 +32,7 @@ graph LR
     class conflitos,dow_jones,nasdaq,em_data_disasters,preco_dolar,preco_petroleo fontes;
     class PySpark,PowerBI,StreamLit ferramentas;
     class resultado dados;
-```"""
+"""
 
 st.title("Análise e Previsão de Preço do Petróleo")
 stmd.st_mermaid(diagrama_mermaid)
