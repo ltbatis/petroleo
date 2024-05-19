@@ -1,4 +1,5 @@
 streamlit
+streamlit-mermaid
 pandas
 numpy
 scikit-learn
