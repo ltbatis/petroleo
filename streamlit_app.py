@@ -10,6 +10,16 @@ import plotly.express as px
 from sklearn.model_selection import cross_val_score
 
 st.title("Análise e Previsão de Preço do Petróleo")
+st.image("assets/offshore_oil.jpg", caption="Plataforma de Extração de Petróleo, Fonte: Pexels@jan-rune-smenes-reite-221584", use_column_width=True)
+
+# TODO: @ltbatis colocar o link do Proton com os Arquivos
+st.markdown("""
+### Links Úteis:
+- [Nosso app no Streamlit](https://petroleo-ptp3vt6vxu7u2psoipv49b.streamlit.app/)
+- [Nosso report no Power BI](https://app.powerbi.com/links/SkSXFlDcuV?ctid=11dbbfe2-89b8-4549-be10-cec364e59551&pbi_source=linkShare)
+- [Nosso repositório no GitHub](https://github.com/ltbatis/petroleo)
+- [Nossos arquivos](https://github.com/ltbatis/petroleo)
+""")
 
 st.write("""
 Bem-vindo à nossa análise e previsão de preços do petróleo. Neste projeto, buscamos explorar e aplicar diferentes técnicas de previsão de séries temporais para prever os preços futuros do petróleo. A previsão de preços de commodities, como o petróleo, é crucial para várias indústrias e setores econômicos, pois influencia decisões estratégicas, planejamento financeiro e gestão de riscos.
